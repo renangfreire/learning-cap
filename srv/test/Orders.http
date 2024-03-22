@@ -1,0 +1,23 @@
+@server = http://localhost:4004/odata/v4
+
+###
+POST {{server}}/products/Orders 
+Content-Type: application/json
+
+{
+    "Customer_ID": "73cb9af3-78fb-45bc-b508-ef2dec40b5ef",
+    "Products": [
+        {
+            "Product_ID": "6cab24e3-c428-493c-90f3-dd20b3276a92"
+        },
+        {
+            "Product_ID": "6cab24e3-c428-493c-90f3-dd20b3276a92"
+        }
+    ],
+    "TotalValue": 150,
+    "Status": "Pending"
+}
+
+###
+GET {{server}}/products/Orders?$expand=Products
+Content-Type: application/json

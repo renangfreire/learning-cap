@@ -1,0 +1,8 @@
+@server = http://localhost:4004/odata/v4
+
+###
+POST {{server}}/Customers
+Content-Type: application/json;
+
+### 
+GET {{server}}/products/Customers?$expand=Orders
