@@ -6,5 +6,6 @@ service ProductsService {
     entity Customers as projection on lab2dev.Customers;
     entity OrdersProducts as projection on lab2dev.OrderProducts;
 
-    action SearchProducts()
+    function logProducts(productID: String) returns String;
+    action logProductAction(productID: String) returns String;
 }
