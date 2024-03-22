@@ -30,3 +30,9 @@ entity Customers : cuid{
         Name : String;
         Orders : Association to many Orders on Orders.Customer = $self;
 }
+
+// External
+entity catFact {
+        fact: String;
+        length: Integer;
+}
